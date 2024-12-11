@@ -7,16 +7,14 @@
 filter_company_data(tik)
 }
 \arguments{
-\item{company_name}{Write in company name in quotes}
+\item{tik}{A character string consisting of the stock ticker for the company.}
 }
 \value{
-The stock ticker for the company if it is a public stock on NASDAQ or NYSE
+A dataframe containing financial ratios for the company if it is a public stock on NASDAQ or NYSE.
 }
 \description{
-This function will allow a use to look at several ratios of the company
+This function allows a user to view several financial ratios for a company.
 }
 \examples{
-#Example usage:
-company_data <- filter_company_data(tik = "AAPL")
-company_data
+filter_company_data(tik = "AAPL")
 }

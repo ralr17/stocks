@@ -1,0 +1,31 @@
+title: Stocks
+url: https://github.com/ralr17/stocks.git
+template:
+  params:
+    bootstrap: 5
+    bootswatch: cerulean
+reference:
+  - title: Main Functions
+    desc: ~
+    contents:
+      - '`filter_company_data`'
+      - '`get_ticker`'
+      - '`plot_multiple_stocks`'
+  - title: Datasets
+    desc: ~
+    contents:
+      - '`cikticker`'
+navbar:
+  title: "Stocks"
+  left:
+    - text: "Getting Started"
+      href: articles/Stock_Knowledge.html
+    - text: "Vignette"
+      menu:
+        - text: "Stock package in action"
+          href: articles/filter_company_data_example.html
+    - text: "Documentation"
+      href: reference/index.html
+  right:
+    - icon: fa-home
+      href: index.html

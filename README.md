@@ -14,17 +14,15 @@ health over time.
 ## Installation
 
 You can install the development version of Stocks from
-[GitHub](FILL%20THIS%20IN) with:
+[GitHub](https://github.com/ralr17/stocks.git) with:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github(FILL THIS IN)
+remotes::install_github(https://github.com/ralr17/stocks.git)
 ```
 
 ## How to use
 
 To learn more about how to use this package, what stock tickers are, and
-the different functions available in this package, visit the [Stock_Knowledge]
-(FILL%20THIS%20IN), vignette. You can find out more about
-how the specific functions work on the [Documentation](FILL%20THIS%20IN)
-page.
+the different functions available in this package, visit the Getting Started tab and the Vignette tab. You can find out more about
+how the specific functions work by clicking on the Documentation tab. 

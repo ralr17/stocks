@@ -1,0 +1,40 @@
+---
+title: "Stock package in use"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Stocks_package_in_use}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Introduction
+
+This vignette demonstrates how to use the `get_ticker`, `plot_multiple_stocks`, and `filter_company_data` function to analyze potential investments. 
+
+# Example Usage
+Let's suppose that we are interested in investing in the tech industry. Let's compare the top 3 companies in the tech  industry in the following way: 
+
+```{r, message=FALSE, warning=FALSE}
+# Load the package
+library(Stocks)
+#let's first find the tickers for the top 3 companies in the tech industry
+get_ticker("Microsoft")
+get_ticker("Apple")
+get_ticker("Nvidia")
+
+#Now let's plot these three stocks from 01/05/2023 to 01/01/2024
+plot_multiple_stocks(c("APLE", "MSFT", "NVDA"), from_date = "01/05/2023", to_date = "01/01/2024")
+
+#Now suppose that we are interested in investing in Apple and want to analyze the financial ratios of Apple over the past few year. We can use the filter_company_data to obtain financial ratios that will allow us to see how Apple has been doing in the past few years
+
+# Fetch data for Apple Inc. (AAPL)
+company_data <- filter_company_data(tik = "AAPL")
+company_data
+
+```
+
+# Output Explanation
+The get_ticker() function allows users to get the ticker that corresponds to the stock that they are interested in, the plot_multiple_stocks() function allows users to plot the stocks of interest and see how the stock prices have fluctuated over a period of interest, and the table above shows financial ratios for Apple Inc. (`AAPL`) from 2015 to 2023. Users can sort, filter, or search for specific data points interactively.
+
+# Conclusion
+In this vignette, we explored how to use the Stocks package to analyze tech companies. This workflow can be applied to other sectors or individual companies of interest. 

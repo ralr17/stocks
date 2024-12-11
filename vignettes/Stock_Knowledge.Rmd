@@ -26,7 +26,7 @@ A **stock ticker** is a unique code used to identify a particular stock or secur
 - **Tesla Inc.** has the stock ticker `TSLA`
 - **Amazon.com Inc.** has the stock ticker `AMZN`
 
-These symbols are used by stock exchanges to list, track, and facilitate the trading of stocks. Stock tickers are crucial for both investors and traders because they allow quick and efficient referencing of stock symbols on financial platforms.
+These symbols are used by stock exchanges to list, track, and facilitate the trading of stocks. Stock tickers are crucial for both investors and traders because they allow quick and efficient referencing of stock symbols on financial platforms. The `get_ticker` function in this package can retrieve the stock ticker symbols for any company that the user inputs. 
 
 ### Role of Stock Exchanges
 
@@ -51,3 +51,6 @@ NASDAQ is known for its technology-oriented companies, such as **Apple**, **Goog
   - On the **NASDAQ**, tickers usually consist of 4 letters (e.g., **GOOG** for Google).
 
 Understanding these exchanges and their tickers helps investors and analysts access, compare, and analyze stocks efficiently.
+
+# Why are financial ratios important?
+Financial ratios are essential tools for investors to evaluate a company's performance and growth potential. The get_financial_ratios function in this package provides key metrics such as gross profit, revenue, net income, changes in net income and revenue, gross margin, and net margin for companies from 2015 to 2023. These ratios help assess profitability, operational efficiency, and growth trends. Gross profit and net income indicate profitability, while changes in net income and revenue reflect operational improvements and market demand. Gross margin highlights cost management, and net margin demonstrates a company’s ability to generate consistent returns. Additional data like CIK numbers, accounting taxonomies (e.g., US-GAAP), and fiscal periods from the SEC’s EDGAR system ensure transparency and reliability for informed investment decisions.

@@ -8,9 +8,7 @@
 #'@import DT
 #'@export
 #'@examples
-#' # Example usage:
-#' company <- filter_company_data(tik = "AAPL")
-#' DT::datatable(company)
+#' filter_company_data(tik = "AAPL")
 
 filter_company_data <- function(tik) {
   # Define the dataframe inside the function
@@ -28,6 +26,10 @@ filter_company_data <- function(tik) {
       Ticker = toupper(Ticker)
     )
 
+  # Round all numeric columns to the nearest hundredth
+  merged_df <- merged_df %>%
+    mutate(across(where(is.numeric), ~ round(.x, 2)))
+
   # Check if df has been populated correctly
   if (nrow(merged_df) == 0) {
     stop("No data found for the specified years.")
@@ -44,6 +46,15 @@ filter_company_data <- function(tik) {
   # Order the data by the year column from smallest to largest
   result <- result %>% arrange(year)
 
-  # Return the result where year is in ascending order
-  return(result)
+  # Return the result as an interactive DT datatable
+  return(
+    DT::datatable(
+      result,
+      options = list(
+        scrollX = TRUE, # Enables horizontal scrolling
+        pageLength = 10 # Default number of rows displayed
+      )
+    )
+  )
 }
+
