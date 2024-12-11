@@ -23,7 +23,7 @@ get_ticker("Apple Inc")
 get_ticker("Nvidia")
 
 #Now let's plot these three stocks from 01/05/2023 to 01/01/2024
-plot_multiple_stocks(c("AAPLE", "MSFT", "NVDA"), from_date = "01/05/2023", to_date = "01/01/2024")
+plot_multiple_stocks(c("AAPL", "MSFT", "NVDA"), from_date = "01/05/2023", to_date = "01/01/2024")
 
 #Now suppose that we are interested in investing in Apple and want to analyze the financial ratios of Apple over the past few year. We can use the filter_company_data to obtain financial ratios that will allow us to see how Apple has been doing in the past few years
 
