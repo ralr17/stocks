@@ -26,7 +26,7 @@ You can install the development version of Stocks from
 
 ``` r
 # install.packages("remotes")
-remotes::install_github(https://github.com/ralr17/stocks.git)
+remotes::install_github("https://github.com/ralr17/stocks.git")
 ```
 
 ## How to use
