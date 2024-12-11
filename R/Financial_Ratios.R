@@ -8,7 +8,7 @@
 #'@import DT
 #'@export
 #'@examples
-#' Example of `filter_company_data` in use is in the stock package in action section
+#' #Example of `filter_company_data` in use is in the stock package in action section
 
 filter_company_data <- function(tik) {
   # Define the dataframe inside the function
