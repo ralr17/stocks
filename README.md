@@ -31,6 +31,4 @@ remotes::install_github("https://github.com/ralr17/stocks.git")
 
 ## How to use
 
-To learn more about how to use this package, what stock tickers are, and
-the different functions available in this package, visit the Getting Started tab and the Vignette tab. You can find out more about
-how the specific functions work by clicking on the Documentation tab. 
+To learn more about using this package, understanding stock tickers, and exploring the available functions, refer to the Getting Started and Documentation tabs. For a comprehensive example of how to use all the functions in the Stocks package, visit the Vignette tab. 
