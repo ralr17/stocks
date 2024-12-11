@@ -6,6 +6,14 @@ editor_options:
 
 # Stocks
 
+<img src="man/figures/Stocks.png" width="200"/>
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+
+
 The goal of the Stocks package is to provide easy-to-use tools for stock
 data retrieval, visualization, and financial ratio analysis,
 specifically for comparing companies and assessing their financial
