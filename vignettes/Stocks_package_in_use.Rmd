@@ -19,7 +19,7 @@ Let's suppose that we are interested in investing in the tech industry. Let's co
 library(Stocks)
 #let's first find the tickers for the top 3 companies in the tech industry
 get_ticker("Microsoft")
-get_ticker("Apple")
+get_ticker("Apple Inc")
 get_ticker("Nvidia")
 
 #Now let's plot these three stocks from 01/05/2023 to 01/01/2024
