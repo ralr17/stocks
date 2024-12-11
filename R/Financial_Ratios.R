@@ -7,13 +7,10 @@
 #'@import dplyr
 #'@import readxl
 #'@examples
-#'
+#'#Example usage:
+#' company_data <- filter_company_data(tik = "AAPL")
+#' company_data
 
-library(dplyr)
-# import the cik and ticker data set
-library(readxl)
-cikticker <- read_excel("~/Desktop/cikticker.xlsx",
-                        col_types = c("text", "numeric"))
 
 # For the package we will have to have cikticker dataframe apart of package
 
@@ -53,34 +50,3 @@ filter_company_data <- function(tik) {
   return(result)
 }
 
-
-company_data <- filter_company_data(tik = "AAPL")
-
-
-
-# visualization that allows user to see how a given ratio changes over time for a specified company
-library(ggplot2)
-
-# Function to generate a plot based on the saved output dataframe
-plot_financial_ratio <- function(data, ratio_name) {
-  # Check if the specified ratio exists in the dataframe
-  if (!ratio_name %in% colnames(data)) {
-    stop("Invalid ratio name provided.")
-  }
-
-  # Create the plot
-  ggplot(data, aes(x = as.factor(year), y = .data[[ratio_name]])) +
-    geom_line() +
-    geom_point() +
-    labs(
-      title = paste("Financial Ratio -", ratio_name, "for", unique(data$Ticker)),
-      x = "Year",
-      y = ratio_name
-    ) +
-    theme_minimal()
-}
-
-# Example usage:
-# Assuming 'object' is the result of filter_company_data function
-# plot for 'gross_profit_margin'
-plot_financial_ratio(company_data, "gross_profit_margin")
