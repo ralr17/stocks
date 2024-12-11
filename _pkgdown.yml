@@ -23,7 +23,7 @@ navbar:
     - text: "Vignette"
       menu:
         - text: "Stock package in action"
-          href: articles/filter_company_data_example.html
+          href: articles/Stocks_package_in_use.html
     - text: "Documentation"
       href: reference/index.html
   right:
