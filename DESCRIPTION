@@ -1,15 +1,35 @@
 Package: Stocks
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Stock Analysis 
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Authors@R: 
+   c(person("Ral", "Reyes", ,"rreyes@wesleyan.edu", role = c("aut")),
+    person("Tegh", "Singh", ,"tsingh@wesleyan.edu", role="aut"))
+Maintainer: Ral Reyes <rreyes@wesleyan.edu>
+Description: Stocks allows users to find stock tickers for companies of interest, plot multiple stocks
+to visualize performance over a user-defined time period, and generate tables summarizing companies, dates,
+and percentage changes. Users can also retrieve key financial ratios for specified companies which can make the analysis of 
+stocks more efficient.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
-Suggests: 
+Roxygen: list(markdown = TRUE)
+Imports: 
+    tidyedgar,
+    dplyr,
+    readxl,
+    ggplot2,
+    plotly,
+    shiny,
+    quantmod,
+    tidyquant,
+    lubridate,
     knitr,
+    scales
+RoxygenNote: 7.3.2
+Suggests: 
     rmarkdown
 VignetteBuilder: knitr
+Depends: 
+    R (>= 3.5)
+LazyData: true
+URL: https://github.com/ralr17/stocks.git
