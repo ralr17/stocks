@@ -1,21 +1,17 @@
 #'@title Quick Look at a Company's Financials
-#'@description This function will allow a use to look at several ratios of the company
-#'@param company_name Write in company name in quotes
-#'@returns The stock ticker for the company if it is a public stock on NASDAQ or NYSE
+#'@description This function allows a user to view several financial ratios for a company.
+#'@param tik A character string consisting of the stock ticker for the company.
+#'@return A dataframe containing financial ratios for the company if it is a public stock on NASDAQ or NYSE.
 #'@import tidyedgar
 #'@import dplyr
 #'@import readxl
 #'@export
 #'@examples
-#'#Example usage:
-#' company_data <- filter_company_data(tik = "AAPL")
-#' company_data
-
-
-# For the package we will have to have cikticker dataframe apart of package
+#' # Example usage:
+#' filter_company_data(tik = "AAPL")
 
 filter_company_data <- function(tik) {
-  # Define the dataframe inside the function
+  # Retrieve financial data using tidyedgar
   df <- tidyedgar::yearly_data(years = 2015:2023)
 
   # Merge df with cikticker by the cik number
@@ -46,7 +42,6 @@ filter_company_data <- function(tik) {
   # Order the data by the year column from smallest to largest
   result <- result %>% arrange(year)
 
-  # Return the result where year is in ascending order
-  return(result)
+  # Return the result as a dataframe
+  return(as.data.frame(result))
 }
-
