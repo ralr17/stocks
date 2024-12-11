@@ -16,5 +16,5 @@ A dataframe containing financial ratios for the company if it is a public stock 
 This function allows a user to view several financial ratios for a company.
 }
 \examples{
-#Example of `filter_company_data` in use is in the stock package in action section
+Example of `filter_company_data` in use is in the stock package in action section
 }
