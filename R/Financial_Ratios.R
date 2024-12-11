@@ -5,13 +5,15 @@
 #'@import tidyedgar
 #'@import dplyr
 #'@import readxl
+#'@import DT
 #'@export
 #'@examples
 #' # Example usage:
-#' filter_company_data(tik = "AAPL")
+#' company <- filter_company_data(tik = "AAPL")
+#' DT::datatable(company)
 
 filter_company_data <- function(tik) {
-  # Retrieve financial data using tidyedgar
+  # Define the dataframe inside the function
   df <- tidyedgar::yearly_data(years = 2015:2023)
 
   # Merge df with cikticker by the cik number
@@ -42,6 +44,6 @@ filter_company_data <- function(tik) {
   # Order the data by the year column from smallest to largest
   result <- result %>% arrange(year)
 
-  # Return the result as a dataframe
-  return(as.data.frame(result))
+  # Return the result where year is in ascending order
+  return(result)
 }

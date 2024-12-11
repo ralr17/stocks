@@ -3,6 +3,7 @@
 export(filter_company_data)
 export(get_ticker)
 export(plot_multiple_stocks)
+import(DT)
 import(dplyr)
 import(ggplot2)
 import(knitr)
