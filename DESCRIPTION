@@ -3,7 +3,7 @@ Type: Package
 Title: Stock Analysis 
 Version: 0.1.0
 Authors@R: 
-   c(person("Ral", "Reyes", ,"rreyes@wesleyan.edu", role = "aut"),
+   c(person("Ral", "Reyes", ,"rreyes@wesleyan.edu", role = c("aut", "cre")),
     person("Tegh", "Singh", ,"tsingh@wesleyan.edu", role="aut"))
 Description: Stocks allows users to find stock tickers for companies of interest, plot multiple stocks to visualize performance over a user-defined time period, and generate tables summarizing companies, dates, and percentage changes. Users can also retrieve key financial ratios for specified companies which can make the analysis of stocks more efficient.
 License: MIT + file LICENSE

@@ -1,11 +1,11 @@
 #'@title Quick Look at a Company's Financials
 #'@description This function will allow a use to look at several ratios of the company
-#'@export
 #'@param company_name Write in company name in quotes
 #'@returns The stock ticker for the company if it is a public stock on NASDAQ or NYSE
 #'@import tidyedgar
 #'@import dplyr
 #'@import readxl
+#'@export
 #'@examples
 #'#Example usage:
 #' company_data <- filter_company_data(tik = "AAPL")
@@ -16,7 +16,7 @@
 
 filter_company_data <- function(tik) {
   # Define the dataframe inside the function
-  df <- yearly_data(years = 2015:2023)
+  df <- tidyedgar::yearly_data(years = 2015:2023)
 
   # Merge df with cikticker by the cik number
   merged_df <- merge(df, cikticker, by = "data.cik", all = FALSE)

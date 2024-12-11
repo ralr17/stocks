@@ -1,6 +1,5 @@
 #'@title Finding a Company's Ticker
 #'@description Every company that has public stock has a ticker. This function will allow a user to plug in the company name and be able to find the ticker of it.
-#'@export
 #'@param company_name Write in company name in quotes
 #'@returns The stock ticker for the company if it is a public stock on NASDAQ or NYSE
 #'@import tidyquant
@@ -9,6 +8,7 @@
 #'@import ggplot2
 #'@import plotly
 #'@import shiny
+#'@export
 #'@examples
 #'get_ticker("Par Technology")
 

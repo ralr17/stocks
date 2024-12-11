@@ -1,6 +1,5 @@
 #'@title Plot Multiple Stocks on One Plot
 #'@description Allows user to see multiple stocks on one plot
-#'@export
 #'@param tickers The stock tickers that will be plotted
 #'@param from_date The starting date of the plot, has to be done as MM/DD/YYYY
 #'@param to_date The ending date of the plot, has to be done as MM/DD/YYYY
@@ -12,6 +11,7 @@
 #'@import dplyr
 #'@import knitr
 #'@import scales
+#'@export
 #'@examples
 #'plot_multiple_stocks(c("PAR", "MSFT", "BA", "AAPL"), from_date = "01/05/2023", to_date = "01/01/2024")
 
